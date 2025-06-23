@@ -16,8 +16,6 @@ spec:
       containers:
         - name: backend-todo
           image: ghcr.io/vergil23416/testappbacked:1.0
-          imagePullSecrets:
-            - name: regcred
           imagePullPolicy: IfNotPresent
           resources:
             limits:
@@ -38,8 +36,10 @@ spec:
             - name: DATABASE_PASSWORD
               value: test
             - name: DATABASE_PORT
-              value: '5432'
+              value: "5432"
             - name: DATABASE_URL
               value: postgres.practice.svc.cluster.local
             - name: DATABASE_NAME
               value: todo_list
+    imagePullSecrets:
+      - name: regcred
