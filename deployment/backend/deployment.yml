@@ -41,5 +41,5 @@ spec:
               value: postgres.practice.svc.cluster.local
             - name: DATABASE_NAME
               value: todo_list
-    imagePullSecrets:
-      - name: regcred
+      imagePullSecrets:
+        - name: regcred
