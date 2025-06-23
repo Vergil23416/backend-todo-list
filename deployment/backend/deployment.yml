@@ -16,6 +16,8 @@ spec:
       containers:
         - name: backend-todo
           image: ghcr.io/vergil23416/testappbacked:1.0
+          imagePullSecrets:
+            - name: regcred
           imagePullPolicy: IfNotPresent
           resources:
             limits:
